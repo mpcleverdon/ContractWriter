@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Create Contract</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="contractForm" (ngSubmit)="generateContract()">
+    <ion-item>
+      <ion-label position="floating">PMC Name</ion-label>
+      <ion-input formControlName="pmcName" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Owner Name</ion-label>
+      <ion-input formControlName="ownerName" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Property Address</ion-label>
+      <ion-input formControlName="propertyAddress" type="text"></ion-input>
+    </ion-item>
+
+    <ion-list>
+      <ion-list-header>
+        <ion-label>Services</ion-label>
+      </ion-list-header>
+      <ion-item *ngFor="let service of services; let i = index">
+        <ion-label>{{service}}</ion-label>
+        <ion-checkbox [formControlName]="'selectedServices.' + i"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+
+    <ion-item>
+      <ion-label position="floating">Custom Terms</ion-label>
+      <ion-textarea formControlName="customTerms" rows="4"></ion-textarea>
+    </ion-item>
+
+    <ion-button expand="block" type="submit" [disabled]="!contractForm.valid">Generate Contract</ion-button>
+  </form>
+</ion-content>

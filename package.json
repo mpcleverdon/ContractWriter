@@ -1,0 +1,39 @@
+{
+  "name": "pmc-contract-writer",
+  "private": true,
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "build:prod": "ng build --prod",
+    "cap:add": "cap add",
+    "cap:sync": "cap sync",
+    "cap:run": "cap run"
+  },
+  "dependencies": {
+    "@angular/animations": "^18.1.0",
+    "@angular/common": "^18.1.0",
+    "@angular/compiler": "^18.1.0",
+    "@angular/core": "^18.1.0",
+    "@angular/forms": "^18.1.0",
+    "@angular/platform-browser": "^18.1.0",
+    "@angular/router": "^18.1.0",
+    "@capacitor/android": "^5.0.0",
+    "@capacitor/core": "^5.0.0",
+    "@capacitor/ios": "^5.0.0",
+    "@ionic/angular": "^7.0.0",
+    "@ionic/pwa-elements": "^3.1.1",
+    "jspdf": "^2.5.1",
+    "rxjs": "^7.8.1",
+    "tslib": "^2.5.0",
+    "zone.js": "~0.14.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^18.1.0",
+    "@angular/cli": "^18.1.0",
+    "@angular/compiler-cli": "^18.1.0",
+    "@capacitor/cli": "^5.0.0",
+    "@ionic/angular-toolkit": "^9.0.0",
+    "typescript": "~5.5.0"
+  }
+}
