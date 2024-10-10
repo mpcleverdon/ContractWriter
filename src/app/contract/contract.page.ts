@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ContractService } from '../services/contract.service';
-import { jsPDF } from 'jspdf';
+// import { jsPDF } from 'jspdf';
 
 @Component({
   selector: 'app-contract',
@@ -9,7 +9,7 @@ import { jsPDF } from 'jspdf';
   styleUrls: ['./contract.page.scss'],
 })
 export class ContractPage implements OnInit {
-  contractForm: FormGroup;
+  contractForm!: FormGroup;
   services = ['Maintenance', 'Cleaning', 'Gardening', 'Pool Cleaning'];
 
   constructor(
@@ -54,9 +54,9 @@ export class ContractPage implements OnInit {
   }
 
   generatePdf(content: string) {
-    const doc = new jsPDF();
-    doc.text(content, 10, 10);
-    doc.save('contract.pdf');
+    // const doc = new jsPDF();
+    // doc.text(content, 10, 10);
+    // doc.save('contract.pdf');
   }
 
   getSelectedServices(selectedServices: boolean[]): string {
