@@ -1,0 +1,7 @@
+{
+  "name": "pmc-contract-writer",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
